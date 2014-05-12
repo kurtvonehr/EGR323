@@ -1,3 +1,3 @@
 function y = ramp(x)
-    y = x.*us.(x);
+    y = x*us(x);
     

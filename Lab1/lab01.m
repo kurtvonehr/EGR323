@@ -66,6 +66,7 @@ plot(time,sin_function);
 xlabel('Time');
 ylabel('Value');
 title('CT Sine Wave');
+hold on;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -91,18 +92,24 @@ for k = 1:size(time,2)
     
 end
 
-figure()
-plot(time,sin_function);
+stem(time,sin_function);
 xlabel('Time');
 ylabel('Value');
 title('CT Sine Wave');
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Problem 3
+% Part A
+
+% Create a discrete time sine function
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
-
+%clear variables
+clearvars
 
 
 

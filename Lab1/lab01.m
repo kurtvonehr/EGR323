@@ -113,7 +113,22 @@ clearvars
 
 
 
+frequency = 1/16;
 
+%create x-axis values
+time = 0:.01:36;
+
+for k = 1:size(time,2)
+   
+    sin_function(k) = sin(2*pi*frequency*time(k));
+    
+end
+
+figure()
+plot(time,sin_function);
+xlabel('Time');
+ylabel('Value');
+title('CT Sine Wave');
 
 
 

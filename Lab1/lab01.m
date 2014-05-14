@@ -101,7 +101,7 @@ title('CT Sine Wave');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Problem 3
-% Part A
+% Part A,B,C,D
 
 % Create a discrete time sine function
 
@@ -111,24 +111,62 @@ title('CT Sine Wave');
 %clear variables
 clearvars
 
+F_o = 2/16;
 
-
-frequency = 1/16;
-
-%create x-axis values
-time = 0:.01:36;
-
-for k = 1:size(time,2)
-   
-    sin_function(k) = sin(2*pi*frequency*time(k));
-    
+for k = 1:36
+    sin_function1(k) = sin(2*pi*F_o*k);
+    time(k) = k*F_o;
 end
 
 figure()
-plot(time,sin_function);
+subplot(2,2,1)
+subplot(time,sin_function1);
 xlabel('Time');
 ylabel('Value');
 title('CT Sine Wave');
+
+F_o = 2/16;
+
+for k = 1:36
+    sin_function1(k) = sin(2*pi*F_o*k);
+    time(k) = k*F_o;
+end
+
+subplot(2,2,2)
+subplot(time,sin_function1);
+xlabel('Time');
+ylabel('Value');
+title('CT Sine Wave');
+
+
+F_o = 11/16;
+
+for k = 1:36
+    sin_function1(k) = sin(2*pi*F_o*k);
+    time(k) = k*F_o;
+end
+
+subplot(2,2,3)
+subplot(time,sin_function1);
+xlabel('Time');
+ylabel('Value');
+title('CT Sine Wave');
+
+
+F_o = 1;
+
+for k = 1:36
+    sin_function1(k) = sin(2*pi*F_o*k);
+    time(k) = k*F_o;
+end
+
+
+subplot(2,2,4)
+subplot(time,sin_function1);
+xlabel('Time');
+ylabel('Value');
+title('CT Sine Wave');
+
 
 
 

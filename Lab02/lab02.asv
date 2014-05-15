@@ -25,6 +25,9 @@ x5 = subs(x,'T',5);
 %plot the continuous time time function
 ezplot(x5);
 
+%Export JPG to working directory
+hgexport(gcf, 'Lab02/fig1.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
+
 clearvars
 
 %**************************************************************
@@ -61,6 +64,9 @@ x16 = subs(x,'T',16);
 
 %plot the continuous time time function
 ezplot(x16);
+
+%Export JPG to working directory
+hgexport(gcf, 'Lab02/fig2.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
 
 clearvars
 
@@ -113,6 +119,9 @@ ezplot(x2, [0,25]);
 intersect = solve(a3 == .1);
 intersect
 
+%Export JPG to working directory
+hgexport(gcf, 'Lab02/fig3.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
+
 clearvars
 
 %**************************************************************
@@ -130,6 +139,9 @@ f = sym('t*(Heaviside(t)-Heaviside(t-2))');
 
 %plot the continuous time time function
 ezplot(f);
+
+%Export JPG to working directory
+hgexport(gcf, 'Lab02/fig4.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
 
 clearvars
 
@@ -185,6 +197,9 @@ g5 = subs(f,'t','-2*t+1');
 %plot the continuous time time function
 ezplot(g5);
 
+%Export JPG to working directory
+hgexport(gcf, 'Lab02/fig5.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
+
 clearvars
 
 %**************************************************************
@@ -195,7 +210,9 @@ clearvars
 %**************************************************************
 
 
-
+x1 = sym('cos(pi*t/5');
+x2 = sym('sin(pi*t/5');
+x3 = sym('exp(i*2*pi*t/3)+ exp(i*pi*t)');
 
 
 

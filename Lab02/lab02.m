@@ -225,6 +225,7 @@ figure()
 subplot(4,1,1)
 %plot the continuous time time function
 ezplot(x1,[0,6*pi]);
+
 subplot(4,1,2)
 %plot the continuous time time function
 ezplot(x2,[0,6*pi]);
@@ -240,17 +241,17 @@ ezplot(compose('imag(x3)',x3),[0,6*pi]);
 %Export JPG to working directory
 hgexport(gcf, 'Lab02/fig6.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
 
-clearvars
+%**************************************************************
 
+% 1.8 Part C
 
+%**************************************************************
 
+sym a;
 
-
-
-
-
-
-
+E1 = sym('int((abs(x1)^2))',t,a,-a);
+E2 = sym('int((abs(x2)^2))',t,a,-a);
+E3 = sym('int((abs(x3)^2))',t,a,-a);
 
 
 

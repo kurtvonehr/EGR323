@@ -181,7 +181,7 @@ clearvars
 F_o = 1;
 
 for k = 1:100
-    sin_function1(k) = sin(2);
+    sin_function1(k) = sin(2*pi*F_o*k);
 end
 
 subplot(2,2,4)

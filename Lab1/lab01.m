@@ -140,6 +140,7 @@ end
 figure()
 subplot(2,2,1)
 stem(sin_function1);
+axis([0 36 -1 1]);
 xlabel('Samples');
 ylabel('Value');
 title('Fo = 2/16');
@@ -155,6 +156,7 @@ end
 
 subplot(2,2,2)
 stem(sin_function1);
+axis([0 36 -1 1]);
 xlabel('Samples');
 ylabel('Value');
 title('Fo = 11/16');
@@ -171,6 +173,7 @@ end
 
 subplot(2,2,3)
 stem(sin_function1);
+axis([0 36 -1 1]);
 xlabel('Samples');
 ylabel('Value');
 title('Fo = pi/16');
@@ -180,12 +183,13 @@ clearvars
 
 F_o = 1;
 
-for k = 1:100
-    sin_function1(k) = sin(2);
+for k = 1:36
+    sin_function1(k) = sin(2*pi*F_o*k);
 end
 
 subplot(2,2,4)
 stem(sin_function1);
+axis([0 36 -1 1]);
 xlabel('Samples');
 ylabel('Value');
 title('Fo = 1');

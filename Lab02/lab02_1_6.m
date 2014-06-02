@@ -26,6 +26,7 @@ x5 = subs(x,'T',5);
 %plot the continuous time time function
 ezplot(x5);
 title({'1.6 A';['x(t) =', char(x5)]});
+axis square
 
 %Export JPG to working directory
 hgexport(gcf, 'EGR323/Lab02/fig1.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
@@ -48,9 +49,11 @@ x = sym('cos(2*pi*t/T)*sin(2*pi*t/T)');
 subplot(3,1,1);
 x4 = subs(x,'T',4);
 
+
 %plot the continuous time time function
 ezplot(x4);
 title({'1.6 B';' ';'T = 4';['x(t) =', char(x4)]});
+axis fill
 
 %Set fundamental period of x
 %function x, variable T = 8
@@ -60,6 +63,7 @@ x8 = subs(x,'T',8);
 %plot the continuous time time function
 ezplot(x8);
 title({'T = 8';['x(t) =', char(x8)]});
+axis fill
 
 %Set fundamental period of x
 %function x, variable T = 16
@@ -69,6 +73,7 @@ x16 = subs(x,'T',16);
 %plot the continuous time time function
 ezplot(x16);
 title({'T = 16';['x(t) =', char(x16)]});
+axis fill
 
 %Export JPG to working directory
 hgexport(gcf, 'EGR323/Lab02/fig2.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
@@ -96,9 +101,8 @@ a1 = subs(x,'A',1/2);
 ezplot(a1, [0,10]);
 hold on
 ezplot(x2, [0,10]);
-
-intersect = solve(a1 == .1);
-intersect
+title({'1.6 C';' '; 'a = 1/2';['x(t) =', char(a1)]});
+axis fill
 
 %alpha = 1/4
 subplot(3,1,2);
@@ -108,9 +112,8 @@ a2 = subs(x,'A',1/4);
 ezplot(a2, [0,10]);
 hold on
 ezplot(x2, [0,10]);
-
-intersect = solve(a2 == .1);
-intersect
+title({'a = 1/4';['x(t) =', char(a2)]});
+axis fill
 
 %alpha = 1/5
 subplot(3,1,3);
@@ -120,9 +123,8 @@ a3 = subs(x,'A',1/8);
 ezplot(a3, [0,20]);
 hold on
 ezplot(x2, [0,25]);
-
-intersect = solve(a3 == .1);
-intersect
+title({'a = 1/8';['x(t) =', char(a3)]});
+axis fill
 
 %Export JPG to working directory
 hgexport(gcf, 'EGR323/Lab02/fig3.jpg', hgexport('factorystyle'), 'Format', 'jpeg');

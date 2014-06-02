@@ -36,6 +36,8 @@ g1 = subs(f,'t','-t');
 
 %plot the continuous time time function
 ezplot(g1);
+title({'1.7 C';' ';['g1(t) =', char(g1)]});
+axis normal
 
 %Set fundamental period of x
 %function x, variable T = 8
@@ -44,6 +46,8 @@ g2 = subs(f,'t','t+1');
 
 %plot the continuous time time function
 ezplot(g2);
+title(['g2(t) =', char(g2)]);
+axis normal
 
 %Set fundamental period of x
 %function x, variable T = 16
@@ -52,6 +56,8 @@ g3 = subs(f,'t','t-3');
 
 %plot the continuous time time function
 ezplot(g3);
+title(['g3(t) =', char(g3)]);
+axis normal
 
 %Set fundamental period of x
 %function x, variable T = 8
@@ -60,6 +66,8 @@ g4 = subs(f,'t','-t+1');
 
 %plot the continuous time time function
 ezplot(g4);
+title(['g4(t) =', char(g4)]);
+axis normal
 
 %Set fundamental period of x
 %function x, variable T = 16
@@ -68,6 +76,8 @@ g5 = subs(f,'t','-2*t+1');
 
 %plot the continuous time time function
 ezplot(g5);
+title(['g5(t) =', char(g5)]);
+axis normal
 
 %Export JPG to working directory
 hgexport(gcf, 'EGR323/Lab02/fig5.jpg', hgexport('factorystyle'), 'Format', 'jpeg');

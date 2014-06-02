@@ -22,18 +22,23 @@ figure()
 subplot(4,1,1)
 %plot the continuous time function
 ezplot(x1,[0,6*pi]);
+title({'1.8 B';' ';['x1(t) = ', char(x1)]});
 
 subplot(4,1,2)
 %plot the continuous time function
 ezplot(x2,[0,6*pi]);
+title(['x2(t) = ', char(x2)]);
 
 subplot(4,1,3)
 %plot the continuous time function
 ezplot(compose('real(x3)',x3),[0,23/6*pi]);
+title(['x3re(t) = ', char(x3)]);
 
 subplot(4,1,4)
 %plot the continuous time function
 ezplot(compose('imag(x3)',x3),[0,23/6*pi]);
+title(['x3im(t) = ', char(x3)]);
+
 
 %Export JPG to working directory
 hgexport(gcf, 'EGR323/Lab02/fig6.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
@@ -44,6 +49,7 @@ hgexport(gcf, 'EGR323/Lab02/fig6.jpg', hgexport('factorystyle'), 'Format', 'jpeg
 
 %**************************************************************
 
+%Creates symbolic integrals of the continuous time functions
 syms a;
 
 E1 = int((x1^2),'-a','a');
@@ -83,12 +89,21 @@ for k = 1:30
 end
 
 figure()
-subplot(1,3,1)
-ezplot(E1_2)
-subplot(1,3,2)
-ezplot(E2_2)
-subplot(1,3,3)
-ezplot(E3_2);
+subplot(3,1,1)
+plot(E1_2);
+title({'1.8 D';' ';['E1(t) = ', char(E1)]});
+xlabel('t');
+subplot(3,1,2)
+plot(E2_2);
+xlabel('t');
+title(['E2(t) = ', char(E2)]);
+subplot(3,1,3)
+plot(E3_2);
+xlabel('t');
+title(['E3(t) = ', char(E2)]);
+
+%Export JPG to working directory
+hgexport(gcf, 'EGR323/Lab02/fig7.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
 
 
 %**************************************************************
@@ -110,14 +125,21 @@ for k = 1:60
 end
 
 figure()
-subplot(1,3,1)
-ezplot(P1)
-subplot(1,3,2)
-ezplot(P2)
-subplot(1,3,3)
-ezplot(P3)
+subplot(3,1,1)
+plot(P1);
+xlabel('t');
+title({'1.8 E';' ';['P1(t) = ', char(E1), '/t']});
+subplot(3,1,2)
+plot(P2);
+xlabel('t');
+title(['P2(t) = ', char(E2), '/t']);
+subplot(3,1,3)
+plot(P3);
+xlabel('t');
+title(['P3(t) = ', char(E3), '/t']);
 
-
+%Export JPG to working directory
+hgexport(gcf, 'EGR323/Lab02/fig8.jpg', hgexport('factorystyle'), 'Format', 'jpeg');
 
 %**************************************************************
 
